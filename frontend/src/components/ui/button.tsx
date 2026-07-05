@@ -30,7 +30,7 @@ export interface ButtonProps
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => (
-    <button className={cn(buttonVariants({ variant, size }), className)} ref={ref} {...props} />
+<button className={cn(buttonVariants({ variant, size }), className)} ref={ref} {...props} aria-label={label || 'Default Button'}>{children}</button>
   )
 );
 Button.displayName = "Button";
