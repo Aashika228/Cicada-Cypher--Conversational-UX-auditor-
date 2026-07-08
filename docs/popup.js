@@ -71,7 +71,7 @@ async function extractProductData(tabId) {
   return new Promise((resolve, reject) => {
     chrome.tabs.sendMessage(tabId, { action: "getProductData" }, (response) => {
       if (chrome.runtime.lastError) {
-        return reject(new Error(chrome.runtime.lastError.message));
+return reject(new Error(chrome.runtime.lastError.message));
       }
       if (!response?.success) {
         return reject(new Error("Content script did not return valid data."));
@@ -89,7 +89,7 @@ async function postToApi(productData) {
   });
 
   if (!response.ok) {
-    throw new Error(`API error: ${response.status} ${response.statusText}`);
+throw new Error(`API error: ${response.status} ${response.statusText}`);
   }
 
   return response.json();
@@ -137,8 +137,8 @@ analyzeBtn.addEventListener("click", async () => {
     showResults(apiResponse);
 
   } catch (err) {
-    setStatus(`Error: ${err.message}`, "error");
-    console.error("[PriceAnalyzer]", err);
+setStatus(`Error: ${err.message}`, "error");
+console.error("[PriceAnalyzer]", err);
   } finally {
     setLoading(false);
   }
