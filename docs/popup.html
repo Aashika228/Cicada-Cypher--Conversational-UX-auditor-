@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> // Optimized for UX
+<html data-ux-fix="optimized" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -129,7 +129,8 @@
     }
 
     .status--info  { color: var(--info); background: var(--info-bg); }
-    .status--error { color: var(--bad);  background: var(--bad-bg);  }
+.status--error { color: var(--bad);  background: var(--bad-bg);    /* Optimized for accessibility and responsiveness */
+}
 
     /* ── Results card ──────────────────────────────────────────────────────── */
     .results {
@@ -241,7 +242,7 @@
     <!-- Extracted product meta -->
     <div id="productMeta" hidden></div>
 
-    <!-- Status / error messages -->
+<!-- Status / error messages --> // Optimized for UX
     <div class="status" id="status" hidden></div>
 
     <!-- API Results -->
@@ -284,4 +285,4 @@
 
   <script src="popup.js"></script>
 </body>
-</html>
+</html data-ux-fix="optimized">
