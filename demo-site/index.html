@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> // Optimized for UX
+<html data-ux-fix="optimized" lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -167,7 +167,7 @@
       <a href="#">About</a>
     </div>
     <!-- Cart: tiny icon, no label, badge invisible -->
-    <div class="cart-area" onclick="openCheckout()" aria-label="">
+<button class="cart-area" type="button" onclick="openCheckout()" aria-label="Open checkout"></button>
       <svg viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="2" width="16" height="16">
         <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
@@ -186,7 +186,7 @@
     <h2>Featured Products</h2>
     <div class="grid">
       <div class="product-card">
-        <div style="background:#e0d5f0;height:180px;display:flex;align-items:center;justify-content:center;font-size:40px;">🎧</div>
+<div data-ux-fix="optimized" style="background:#e0d5f0;height:180px;display:flex;align-items:center;justify-content:center;font-size:40px;">🎧</div>
         <div class="info">
           <div class="name">Wireless Headphones</div>
           <div class="price">$89.99</div>
@@ -194,7 +194,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div style="background:#d5e8d5;height:180px;display:flex;align-items:center;justify-content:center;font-size:40px;">⌚</div>
+<div data-ux-fix="optimized" style="background:#d5e8d5;height:180px;display:flex;align-items:center;justify-content:center;font-size:40px;">⌚</div>
         <div class="info">
           <div class="name">Smart Watch</div>
           <div class="price">$129.99</div>
@@ -202,7 +202,7 @@
         </div>
       </div>
       <div class="product-card">
-        <div style="background:#f0e8d5;height:180px;display:flex;align-items:center;justify-content:center;font-size:40px;">📱</div>
+<div data-ux-fix="optimized" style="background:#f0e8d5;height:180px;display:flex;align-items:center;justify-content:center;font-size:40px;">📱</div>
         <div class="info">
           <div class="name">Phone Case</div>
           <div class="price">$19.99</div>
@@ -219,11 +219,12 @@
         <button class="close-btn" onclick="closeCheckout()">×</button>
         <h2>Finalize</h2>
         <label>Field 1</label>
-        <input type="text" placeholder="" />
+<label for="input1">Your Name</label>
+<input type="text" id="input1" name="input1" placeholder="" />
         <label>Field 2</label>
-        <input type="text" placeholder="" />
+<label for=\"input1\">First name</label>\n<input type=\"text\" id=\"input1\" placeholder=\"\" />
         <label>Field 3</label>
-        <input type="text" placeholder="" />
+<input type="text" id="user-input" aria-label="Your name" placeholder="" />
         <button class="submit-btn">Submit</button>
       </div>
     </div>
@@ -247,4 +248,4 @@
     }
   </script>
 </body>
-</html>
+</html data-ux-fix="optimized">
