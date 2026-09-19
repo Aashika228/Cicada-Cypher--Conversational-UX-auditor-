@@ -30,7 +30,12 @@ export interface ButtonProps
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => (
-    <button className={cn(buttonVariants({ variant, size }), className)} ref={ref} {...props} />
+<button
+  className={cn(buttonVariants({ variant, size }), className)}
+  ref={ref}
+  {...props}
+  aria-label={props['aria-label'] ?? (typeof props.children === 'string' ? undefined : 'Button')}
+/>
   )
 );
 Button.displayName = "Button";
